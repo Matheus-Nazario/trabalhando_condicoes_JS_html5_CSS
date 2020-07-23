@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> Condições IF e Else </title>
+    <style>
+        body{
+            background-color: rgb(241, 241, 255);
+            color:black;
+            font: bolder;
+            }
+    </style>
+</head>
+<body>
+    <h1> <stron > CET - SP </stron> </h1>
+    <p> Qual é a velocidade do carro? </p>
+    <input type="number" name="txtvel" id="txtvel" >
+    <input type="button" value="verificar" onclick="calcular()">
+    <div id="res"> suspensão...</div>
+    <script>
+        function calcular () {
+        var txtv = window.document.getElementById(`txtvel`)
+        var vel = Number(txtv.value)
+        var res = window.document.getElementById(`res`)
+        
+        if (vel>60) {
+            res.innerHTML = `A Sua velocidade foi ${vel}Km, vc foi multado!`
+        }
+        else{
+            res.innerHTML = `Dirija sempre com o cinto de segurança`
+        }
+        }
+</script>
+</body>
+</html>
